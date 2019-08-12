@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <title>Escalonamento de Matrizes</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Este é um site de estudos sobre Escalonamento de Matrzies em Álgebra Linear.">
+    </head>
+    <body>
+        <h1>Escalonamento de Matrizes - Álgebra Linear</h1>
+        <p>Basicamente, se consiste em analisar se uma matriz aumentada é ou não <strong>consistente</strong>, onde após ser feito os procediemtnos para a simplificação da matriz aumentada, os seus valores devem seguir um padrão</p>
+        <ul>
+            <li><strong>Procedimentos</strong></li>
+                <ol>
+                    <li><strong>Mudança de Escala</strong></li>
+                        <pre>
+        Ln = X.Ln (X pertence R*)
+                        </pre>
+                    <li><strong>Substituição</strong></li>
+                        <pre>
+        Ln = Ln + Lk
+                        </pre>
+                    <li><strong>Troca</strong></li>
+                    <pre>
+        Ln trocA de posição com Lk
+                    </pre>
+                </ol>
+        </ul>
+        <p>A aparência final de uma matriz aumentada, deve seguir um padrão que contenha <strong>X1, X2 e X3</strong>, por exemplo:</p>
+        <pre>
+        (1   0   0)
+        (0   1   0)  ----> Matriz dos valores
+        (0   0   1)
+        </pre>
+        <p>Porém, podem haver situações em que a matriz não seguirá tal conceito, como por exemplo o caso de uma <strong>matriz inconsistente</strong>, onde os operadores da última linha são todos <strong>nulos</strong> porém geram um valor. Como no exemplo seguinte:</p>
+        <pre>
+        (4  -8  12   1)
+        (0  -2   8  -1)
+        (0   0   0  15)
+        </pre>
+        <p>Perceba que na última, os valores das variantes são todos nulos, porém, a coluna de valores da igualdade possuem um valor diferente de zero. Logo, é deduzido que tal matriz é inconsistente, ou seja, a matriz também não é escalonada.</p>
+        <p> Para que uma matriz seja considerada escalonada, ela deve seguir tais restrições:</p>
+        <ol>
+            <strong><li>Todas as linhas não nulas estão acima de qualquer linha que só contenha zeros;</li></strong>
+            <strong><li>O elemento líder de cada linha (X1, X2 ou X3) não nulaestá em uma coluna à direita do elemento líder da linha acima, ou seja, deve seguir um padrão de ESCADA;</li></strong>
+            <strong><li>Todos os elementos na coluna de um elemento líder que estão abaixo dele, são iguais a zero;</li></strong>
+            <strong><li>O elemento líder de cada linha não nula, é igual a 1;</li></strong>
+            <strong><li>Cada elemento líder igual a 1 é o único elemento não nulo em sua coluna.</li></strong>
+        </ol>
+        <p>De forma geral, é algo bem simples, onde o significado <strong>escalonamento</strong> significa que a matriz deve seguir um padrão de <strong>escada</strong> para os elementos líderes de cada coluna. Por exemplo:</p>
+        <pre>
+        (1   0   0)
+        (0   1   0)  ----> Matriz <strong>ESCALONADA</strong>
+        (0   0   1)
+        
+        (1   0   0)
+        (0   1   3)  ----> Matriz <strong>NÃO ESCALONADA</strong>
+        (0   0   1)
+        
+        (X   0   0)
+        (0   Y   0)  ----> Matriz <strong>ESCALONADA</strong>
+        (0   0   Z)
+        
+        (1   0   0    0   0)
+        (0   0   1    0   0)  ----> Matriz <strong>ESCALONADA</strong>
+        (0   0   0    0   1)
+        </pre>
+        <p>Perceba que no úlimo exemplo, independente da posição da coluna, se o elemento líder estiver a direita de seu antecessor uma linha abaixo e todos os outros valores de sua coluna forem nulos, ainda sim é considerado <strong>escalonado</strong>.</p>
+    </body>
+</html>
