@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <title>Equações Vetoriais</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Este é um site de estudos sobre Equações Vetoriais em Álgebra Linear.">
+    </head>
+    <body>
+        <h1>Equações Vetoriais - Álgebra Linear</h1>
+        <p> Basicamente, este conteúdo se consiste na aplicação de vetores e suas equações, mesclados a equações lineares e as matrizes aumentadas. Logo, o conceito de vetor é uma <strong>matriz com apenas uma coluna</strong>, como o exemplo seguinte: </p>
+        <pre>
+             [ X ]
+        v1 = [ Y ]
+             [ Z ]
+        </pre>
+        <p>Onde X,Y e Z são <strong>números reais</strong>. Logo uma operação importante que deve ser lembrada, é a <strong>soma de vetores</strong>, onde é somada cada linha de v1 com v2, gerando assim, um terceiro vetor. De certa forma, é traçada linhas paralelas aos vetores contrários, com o intuito de se encontrarem, gerando um ponto de encontro.</p>
+        <p><strong>OBS: Vetores são os pontos X e Y do plano cartesiano. Esta operação, é chamada de <strong>soma vetorial</strong>:</strong></p>
+        <pre>
+             [ X ]           [ A ]
+        v1 = [ Y ]      v2 = [ B ]
+             [ Z ]           [ C ]
+             
+        Logo, sua soma é:
+        
+            X + A = [ J ]
+            Y + B = [ K ]
+            Z + C = [ L ]
+            
+        Sendo gerado um vetor novo, com os dados obtidos.
+        </pre>
+        <p>De forma simplificada, em um plano cartesiano, a operação seria a seguinte:</p>
+        <img src="http://cepa.if.usp.br/e-fisica/imagens/mecanica/basico/cap12/grafico8_pg4.jpg" alt="Descrição">
+        <p>Onde foi traçado as linhas paralelas para os vetores v1 e v2, gerando um terceito vetor (V), o qual, possui o valor da soma dos vetores v1 e v2, ou seja, <strong>V = v1 + v2</strong>.</p>
+        <p>Uma outra operação a ser analisada, é o uso de <strong>escalares</strong>, os quais são valores (múltiplicos escalares) que ao serem múltiplicados a um vetor, geram um novo vetor. Como no exemplo seguinte:</p>
+        <pre>
+        Dados U = [  1 ] e K = [  2 ], calcule o valor de 4U, (-3)K e 4U + (-3)K: 
+                  [ -2 ]       [ -5 ]
+                  
+        Logo,
+        
+            <strong>4U</strong> = [ 4 x  1 ] -> [ 4]
+                 [ 4 x -2 ]    [-8]
+                 
+                 
+            <strong>(-3)K</strong> = [-3 x  2] -> [-6]
+                    [-3 x -5]    [15]
+                    
+                    
+            <strong>4U + (-3)K</strong> = [ 4] + [-6] -> [-2]
+                         [-8]   [15]    [ 7]
+        </pre>
+        <p><strong>OBS: Lembre-se, por estarmos trabalhando com equações em um plano cartesiano, um vetor não está restrito a apenas 2 retas, ou seja, inúmeras retas podem estar presentes no plano, gerando assim, sempre, um vetor de 1 coluna com a quantidade de linhas igual a quantidade de retas no plano cartesiano.</strong></p>
+        <p>Diante de tudo, os vetores, assim como as demais equações, também possuem <strong>propriedades algébricas</strong>, ou seja, regras que podem ser implementadas em suas equações. Sendo elas as seguintes:</p>
+        <ol><strong>
+            <li> v1 + v2 = v2 + v1</li>
+            <br>
+            <li>v1 + (v2 + v3) = (v1 + v2) + v3</li>
+            <br>
+            <li>v1 + 0 = v1</li>
+            <br>
+            <li>-v1 + v1 = 0</li>
+            <br>
+            <li>x(v1 + v2) = x.v1 + x.v2</li>
+        </strong></ol>
+        <p>Dito isso, algo que pode ser perguntado em uma questão de prova por exemplo, é sobre a possibilidade de um terceiro vetor, sendo aplicada a matriz aumentada na equação gerada por esses vetores. Por exemplo:</p>
+        <pre>
+        Dado dois vetores v1 e v2, determine se um terceiro vetor pode ser gerado como combinação linear de v1 e v2.
+        Logo,
+        
+             [ X ]       [ X1 ]       [ X2 ]
+        v1 = [ Y ]  v2 = [ Y1 ]  v3 = [ Y2 ]   Onde v1 + v2 = v3.
+             [ Z ]       [ Z1 ]       [ Z2 ]
+             
+             
+        O primeiro passo a ser feito, é analisar se a soma das linhas de v1 e v2 se geram os resultados das linhas de v3, ou seja:
+        
+            X + X1 = X2
+            Y + Y1 = Y2
+            Z + Z1 = Z2
+            
+        Caso essa não seja uma soma correpondente, ou seja, se as somas das linhas não forem iguais aos valores de v3, é dado dois
+        possíveis valores que múltiplicados a v1 e v2, possam gerar v3, ou seja:
+        
+            a1.v1
+            a2.v2
+        
+        Logo,
+        
+            a1.X + a2.X1 = X2
+            a1.Y + a2.Y1 = Y2
+            a1.Z + a2.Z1 = Z2
+            
+        Perceba que uma equação linear foi gerada, bastando realizar a operação de <strong>matriz aumentada</strong>, para gerar uma <strong>matriz reduzida</strong>, 
+        onde será encontrado os valores de a1 e a2. Após isso, basta múltiplicar a1.v1 e a2.v2. Caso a soma (a1.v1 + a2.v2) for igual
+        a v3, o vetor v3 poderá ser gerado.
+        </pre>
+        <p>De certa forma, a equação geral para tal problema, seria:</p>
+        <pre>
+        a1.v1 + a2.v2 = v3
+        </pre>
+    </body>
