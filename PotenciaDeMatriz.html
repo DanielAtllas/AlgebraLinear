@@ -1,0 +1,128 @@
+<html lang="pt-br">
+    <head>
+        <title>Potência de Matriz</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Este é um site de estudos sobre Potência de matrizes em Álgebra Linear.">
+    </head>
+    <body>
+        <h1>Potência de uma matriz - Álgebra Linear</h1>
+        <p>Só é possíel múltiplicar uma matriz se A<i>nxm</i> . A<i>nxm</i> onde M = N (ou seja, <storng>matriz quadrada</storng>), ou seja, dado uma matriz A, a potência A^x <strong>só é possível se A for uma matriz quadrada</strong>. Como no exemplo a seguir: </p>
+        <pre>
+          A^2 = [ 1  4/3  6/5 ]   [ 1  4/3  6/5 ]
+                [ 2  5/2  1/4 ] X [ 2  5/2  1/4 ]
+                [ 3   7  Raiz3]   [ 3   7  Raiz3]
+        </pre>
+        <p>Logo, o <strong>primeiro elemento</strong> é a soma da multiplicaçãp da 1ª linha com a 1ª coluna, onde com o seguimento do exemplo aneterior:</p>
+        <pre> 
+            A^2 = [(1.1 + 4/3.2 + 6/5.3)    (1.4/3 + 4/3.5/2 + 6/5.7)]
+        </pre>
+        <p>Sendo este cálculo, o valor dos elementos 1 e 4 da matriz A^2. Então, basta seguir o mesmo método para os demais elementos, para cada elemento. Portanto, a representação final da matriz anterior, é a seguinte:</p>
+        <pre>
+            A^2 = [(1.1 + 4/3.2 + 6/5.3)    (1.4/3 + 4/3.5/2 + 6/5.7)   (1.6/5 + 4/3.1/4 + 6/5.Raiz3)]
+                  [(2.2 + 5/2.2 + 1/4.3)    (2.4/3 + 5/2.5/2 + 1/4.7)   (2.6/5 + 5/2.1/4 + 1/4.Raiz3)]
+                  [(3.2 + 7.2 + Raiz3.3)    (3.4/3 + 7.5/2 + Raiz3.7)   (3.6/5 + 7.1/4 + Raiz3.Raiz3)]
+                  
+        Onde    
+            
+            A^2 = [(1 + 8/3 + 18/5 )    (4/3 + 10/3 + 42/5)   (6/5 + 1/3 + 6Raiz3/5)]
+                  [(2 +  5  +  3/4 )    (8/3 + 25/4 +  7/4)   (12/5 + 5/6 + Raiz3/4)]
+                  [(3 + 14 + 3Raiz3)    (4 + 35/2 + 7Raiz3)   (18/5 + 7/4 +    3   )]
+                  
+        Logo
+        
+            <strong>E1</strong> = 1 + 8/3 + 18/5 = <strong>109/15</strong>
+            <strong>E2</strong> = 4/3 + 10/3 + 42/5 = <strong>196/15</strong>
+            <strong>E3</strong> = 6/5 + 1/3 + 6Raiz3/5 = <strong>23+18Raiz3/15</strong>
+            <strong>E4</strong> = 2 +  5  +  3/4 = <strong>31/4</strong>
+            <strong>E5</strong> = 8/3 + 25/4 +  7/4 = <strong>125/12</strong>
+            <strong>E6</strong> = 12/5 + 5/6 + Raiz3/4 = <strong>125+10Raiz3/40</strong>
+            <strong>E7</strong> = 3 + 14 + 3Raiz3 = <strong>17+3Raiz3</strong>
+            <strong>E8</strong> = 4 + 35/2 + 7Raiz3 = <strong>43+14Raiz3/2</strong>
+            <strong>E9</strong> = 18/5 + 7/4 + 3  = <strong>167/20</strong>
+            
+        Por fim, seu resultado é o seguinte:
+        
+            A^2 = [109/15     190/15      23+18Raiz3/15 ]
+                  [31/4       125/12      125+10Raiz3/40]
+                  [17+3Raiz3  43+14Raiz3  167/20        ]
+
+        </pre>
+        <hr>
+        <h2>Transposta de Matriz</h2>
+        <p>Basicamente, a transposição de uma matriz, é <strong>alterar a posição de seus valores</strong>, onde <strong>o que é linha se torna coluna e vice-versa</strong>. Como no exemplo:</p>
+        <pre>
+            A = [ X  1 ] -----> A = [X  Y  Z]
+                [ y  2 ]            [1  2  3]
+                [ Z  3 ]            
+        </pre>
+        <p>Perceba que algo importante a ser destacado, é que a quantidade de linhas se torna a mesma quantidade de colunas e vice-versa. Além disso, esse estudo, possui 4 <strong>teoremas</strong> que devem/podem ser respeitados, os quais podem facilitar a resolução de algum problema. Sendo eles:</p>
+        <ol><strong>
+            <li>(A^t)^t = A</li>
+            <li>(A+B)^t = A^t + B^t</li>
+            <li>B.(A^t) = (B.A)^t</li>
+            <li>(A.B)^t = A^t . B^t</li>
+        </strong></ol>
+        <p> Onde t é a transposta, como no teorema 2, onde a transposta de (A+B) é igual a transposta de A + a transposta de B.</p>
+        <hr>
+        <h2>Matriz Inversa</h2>
+        <p>Uma <strong>identidade de uma matriz</strong> é representada de forma que os valores de sua multiplicação, se tornem os mesmos valores originais, ou seja, os valores devem ser 1 e 0, como a seguir: </p>
+        <pre>
+            A = [ 1  3 ] 
+                [ 2  4 ]
+                
+        Logo, sua identidade seria:
+        
+            A = [ 1  0 ]
+                [ 0  1 ]
+        </pre>
+        <p>Dado a matriz A, sua inversa é <strong>A^-1</strong>, tal que A.A^-1 é uma <strong>identidade</strong>. Assim como A deve ser quadrada, onde A<i>nxm</i>.A^-1<i>nxm</i>=I<i>n</i>.</p>
+        <p>Para se cálcular a inversa de uma matriz, alguns passos devem serseguidos, sendo eles:</p>
+        <ol><strong>
+            <li>É preciso atribuir, convencionalmente, icóguinitas para a matriz inversa.</li>
+            <li>É preciso efetuar o produto A.A^-1 e igualar a I(identidade).</li>
+            <li>É preciso montar um sistema de equações e resolve-lo.</li>
+            <li>É preciso escrever a inversa com os valores das icóguinitas obtidas.</li>
+        </strong></ol>
+        <p>Como no exemplo a seguir:</p>
+        <pre>
+            A = [ 1  3 ]
+                [ 2  4 ]
+                
+        Passo 1 - Atribuir icóguinitas para a matriz inversa
+        
+            A = [ 1  3 ] x [ a  b ]
+                [ 2  4 ]   [ c  d ]
+                
+        Passo 2 - Efetuar o produto de A.A^-1 e igualar a identidade
+        
+            A = [ 1  3 ] x [ a  b ] = [ 1  0 ]
+                [ 2  4 ]   [ c  d ]   [ 0  1 ]
+                
+            Logo
+            
+            A = [ a+3c    b+3d ] = [ 1  0 ]
+                [ 2a+4c  2b+4d ]   [ 0  1 ]
+                
+        Passo 3 - Montar um sistema de equações
+        
+            A = [ a+3c    b+3d ] = [ 1  0 ]
+                [ 2a+4c  2b+4d ]   [ 0  1 ]
+                
+            onde
+            
+            a+3c  = 1
+            b+3d  = 0
+            2a+4c = 0
+            2b+4d = 1
+            
+        Perceba que uma equação linear foi formada, podendo então, realizar uma <strong>Matriz aumentada</strong> para resolver
+        Onde essa matriz aumentada deve ter um corpo 4x5 ( 4 Linhas - Qtde de equações e 5 colunas - Qtde de colunas no Passo 2)
+        Logo:
+        
+            [ 1 0 3 0 1]
+            [ 0 1 0 3 0] ----> Matriz Aumentada
+            [ 2 0 4 0 0]
+            [ 0 2 0 4 1]
+        </pre>
+    </body>
+<html>    
